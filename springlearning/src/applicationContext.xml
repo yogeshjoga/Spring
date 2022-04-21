@@ -7,9 +7,28 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Define your beans here -->
-    <bean id="myid" class="com.spring.engin">
-    </bean>
+  
+     
+ 
+     <!-- Dependences of object spring creation automatically  in student class  -->
+     
+     
+     <!-- this is the Object creation for use multiple times to use in our program -->
+      <bean id="stud1" class="com.dependent.injection.object.type.Student1"/>
+      
+      
+      
+     <bean id="studentOfObject" class="com.dependent.injection.object.type.Student">
+      <property name="studentName" value="yogesh joga darling"/>
+      <property name="rollNum" value="1007"/>
+      <property name="stud1" ref="stud1"/>
+     
+     </bean>
+
+     
+     
+     
+    
     
 </beans>
 

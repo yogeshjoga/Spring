@@ -19,22 +19,15 @@ public class UserLogic {
 		String busBrandName = scanner.next();
 		int busNumberOfCylinders = scanner.nextInt();
 		double busCc = scanner.nextDouble();
-		
 		// load the spring configuration files
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		
 		// retrieve bean from spring container
 		engin en = context.getBean("myid",engin.class);
-		
-		
-		
 		// call the methods 
 		en.car(carBrandName, carNumberOfCylinders, carCc);
 		en.bike(bikeBrandName, bikeNumberOfCylinders, bikeCc);
 		en.bus(busBrandName, busNumberOfCylinders, busCc);
-		
 		en.display();
-		
 		// close the context
 		context.close();
 		

@@ -1,6 +1,6 @@
 package com.spring;
 
-public class engin implements Vehicle {
+public class engin implements Vehicle,Piston {
 	public String carBrandName;
 	public String bikeBrandName;
 	public String busBrandName;
@@ -12,7 +12,7 @@ public class engin implements Vehicle {
 	public double busCc;
 
 	@Override
-	public void car(String brandName, int numberOfCylinders, double cc) {
+	public void car(String brandName, int numberOfCylinders, double cc){
 		this.carBrandName = brandName;
 		this.carNumberOfCylinders = numberOfCylinders;
 		this.carCc = cc;
@@ -34,7 +34,14 @@ public class engin implements Vehicle {
 		this.bikeCc = cc;
 
 	}
+	/*
+	 * this is the Piston Interface we can implemented
+	 */
 	
+	@Override
+	public String size() {
+		return "1000mm";
+	}
 	
 	public void display() {
 		System.out.println("this is the car : "+this.carBrandName+" \n"+this.carNumberOfCylinders+"\n"+this.carCc);

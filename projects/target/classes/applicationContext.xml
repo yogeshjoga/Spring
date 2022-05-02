@@ -58,6 +58,16 @@
 	</bean>
 	
 	
+	
+	<!-- this is the loose coupling depedences to injections -->
+	<bean id="mathCheat" class="com.LooseCoupling.MathCheat"/>
+	<bean id="scienceCheat" class="com.LooseCoupling.ScienceCheat"/>
+	
+	<bean id="std" class="com.LooseCoupling.Student">
+	   <property name="cheat" ref="scienceCheat"></property>
+	
+	</bean>
+	
 
 
 </beans>

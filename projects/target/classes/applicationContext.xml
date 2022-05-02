@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- ide okka file lo anni dependences rasthunna yogi don't confusion okay -->
+
+	<!-- manual use -->
+	<bean id="airtel" class="com.SimProject.Airtel" />
+	<bean id="jio" class="com.SimProject.Jio" />
+	<!-- by helping interface -->
+	<bean id="sim" class="com.SimProject.Jio" />
+
+
+	<!-- set and con injection Student class and student exams dependences -->
+	<bean id="student" class="com.setAndconInjection.Student">
+		<property name="studentName" value="yogesh" />
+		<property name="rollNum" value="1001" />
+	</bean>
+
+
+
+	<!-- Constructor injection by using this xml file -->
+	<bean id="studentCon" class="com.setAndconInjection.StudentConst">
+		<constructor-arg name="studentName" value="yogeshjoga" />
+		<constructor-arg name="rollNum" value="1100" />
+
+	</bean>
+
+
+
+<!--  
+	<bean id="vehicle" class="com.ObjectInjection.Bike">
+		<property name="car1">
+			<bean class="com.ObjectInjection.Car" />
+		</property>
+
+		<property name="bike1" ref="com.ObjectInjection.Bike" >
+		
+		    <bean class="com.ObjectInjection.Bike" /> 
+		</property>
+
+	</bean>
+	
+	-->
+	
+	<!-- second approch we can create the object by using ref -->
+	<bean id="bike" class="com.ObjectInjection.Bike"></bean>
+	<bean id="car" class="com.ObjectInjection.Car"></bean>
+	
+	<bean id= "vehicle" class="com.ObjectInjection.Vehicle">
+	<property name="bike1" ref="bike"></property>
+	<property name="car1" ref="car"/>
+	</bean>
+	
+	
+
+
+</beans>
+
+
+
+
+

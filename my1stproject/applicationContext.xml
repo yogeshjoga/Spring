@@ -10,15 +10,15 @@
      <!-- byname mode i will use  -->
     
      
-     <bean id="Car" class="com.autowiring.Car" >
-     <constructor-arg name="carName" value="AUDI R8 "/>
-     <constructor-arg name="carWheels" value="4"/>
+     <bean id ="drvr" class="org.springframework.jdbc.datasourece.DriverManagerDataSource">
+     <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+     <property name="url" value="jdbc:mysql://localhost:3306:yogi"/>
+     <property name="username" value="root"/>
+     <property name="password" value="root"/>
      </bean>
      
-     <bean id="vehicle" class="com.autowiring.Vehicle" autowire="byName">
-     <constructor-arg name="car" value="Your Car Name"/>
-     <property name="carString" value="ROLLS ROYCE"/>
-     <property name="carWheels" value="6"/>
+     
+     <bean>
      
      </bean>
     

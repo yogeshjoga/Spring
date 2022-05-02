@@ -7,28 +7,20 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-  
+     <!-- byname mode i will use  -->
+    
      
- 
-     <!-- Dependences of object spring creation automatically  in student class  -->
+     <bean id="Car" class="com.autowiring.Car" >
+     <constructor-arg name="carName" value="AUDI R8 "/>
+     <constructor-arg name="carWheels" value="4"/>
+     </bean>
      
-     
-     <!-- this is the Object creation for use multiple times to use in our program -->
-      <bean id="stud1" class="com.dependent.injection.object.type.Student1"/>
-      
-      
-      
-     <bean id="studentOfObject" class="com.dependent.injection.object.type.Student">
-      <property name="studentName" value="yogesh joga darling"/>
-      <property name="rollNum" value="1007"/>
-      <property name="stud1" ref="stud1"/>
+     <bean id="vehicle" class="com.autowiring.Vehicle" autowire="byName">
+     <constructor-arg name="car" value="Your Car Name"/>
+     <property name="carString" value="ROLLS ROYCE"/>
+     <property name="carWheels" value="6"/>
      
      </bean>
-
-     
-     
-     
-    
     
 </beans>
 

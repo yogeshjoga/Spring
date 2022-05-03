@@ -127,5 +127,8 @@
 	<classpathentry kind="lib" path="/springlearning/libs/spring-websocket-5.3.9.jar"/>
 	<classpathentry kind="lib" path="/springlearning/libs/spring-websocket-5.3.9-javadoc.jar"/>
 	<classpathentry kind="lib" path="/springlearning/libs/spring-websocket-5.3.9-sources.jar"/>
+	<classpathentry kind="lib" path="G:/Spring_tools/spring-framework-5.3.9/libs/javax-inject.jar"/>
+	<classpathentry kind="lib" path="G:/mysql-connector.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Joga Yogesh/OneDrive/Desktop/mysql-connector-java-8.0.26 (1).jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

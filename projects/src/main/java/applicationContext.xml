@@ -68,6 +68,50 @@
 	
 	</bean>
 	
+	<!-- This is the service project beans -->
+	<bean id="calling" class="com.MobileService.Calling"/>
+	<bean id="data" class="com.MobileService.Data"/>
+	<bean id="cloudService" class="com.MobileService.CloudService"/>
+	<bean id="mob" class="com.MobileService.Mobile">
+	 <property name="service" ref="data"/>
+	</bean>
+	
+	
+	
+	<!-- this is the Autowiring concept started so we will use this 2 @annotations 
+	@AutoWire @ Qualifier okay lets start -->
+	
+	<context:annotation-config></context:annotation-config>
+	
+	<bean id="ktm" class="com.AutoWiring.KtmDuke"/>
+	<bean id="bullet" class="com.AutoWiring.RoyalEnfield"/>
+	<bean id="bike3" class="com.AutoWiring.Bike">
+	</bean>
+	
+	
+	
+	<!-- this property file config block okay -->
+	<context:annotation-config></context:annotation-config>
+	<context:property-placeholder location="classpath:User.properties"/>
+	
+	
+	<bean id="mobile" class="com.PropertyFiles.MobileUser"/>
+	<bean id="desktopUser" class="com.PropertyFiles.DesktopUser"/>
+	
+	<bean id="client" class="com.PropertyFiles.Client">
+	</bean>
+	
+	
+	
+	
+	 <!-- this is the bean life cycle and litral injection properties by jdbc project -->
+	 
+	 <!-- this is for annotation tag <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> -->
+     <context:annotation-config/>
+     
+     <bean id="studentDAO" class="com.jdbc_spring.StudentDAO"/>
+     
+	
 
 
 </beans>

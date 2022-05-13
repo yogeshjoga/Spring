@@ -1,9 +1,15 @@
 package com.love;
 
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@Configuration
-@ComponentScan
+@Controller
 public class Love {
+	@RequestMapping("/")
+	public String welcome() {
+		System.out.println("code is deployed ");
+		return "welcome";
+		
+	}
 
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>New Student</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+	<h1>High School Student Mangement</h1>
+	<hr>
+	<h3>Add new Student</h3>
+	<form action="#" th:action="@{/saveStudent}" th:object="${student}" method="POST">
+			<input th:type="text" th:field="*{studentName}" placeholder="student name" class="form-control mb-4 col-4" required/>
+			<input th:type="text" th:field="*{studentRollNum}" placeholder="student RollNumber" class="form-control mb-4 col-4" onfocus="this.value=''" value="Click here to clear" required/>
+			<input th:type="text" th:field="*{studentClass}" placeholder="student Class" class="form-control mb-4 col-4" onfocus="this.value=''" value="Click here to clear" required/>
+			<input th:type="text" th:field="*{studentType}" placeholder="student type" class="form-control mb-4 col-4" required />
+			<input th:type="text" th:field="*{studentFee}" placeholder="student fee" class="form-control mb-4 col-4" onfocus="this.value=''" value="Click here to clear" required/>
+			<input th:type="text" th:field="*{studentPh}" placeholder="student phone Number" class="form-control mb-4 col-4" value="Click here to clear" required/>
+		<!-- 	 <input type="text" onfocus="this.value=''" value="Click here to clear">    -->
+			<input th:type="reset" value="reset" class="btn btn-danger"/>
+			<button th:type="submit" class="btn btn-info col-2">Update</button>
+	</form>
+	<hr>
+	
+</div>
+</body>
+</html>

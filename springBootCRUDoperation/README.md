@@ -5,19 +5,39 @@
   Delete
   
 # project requirements
+ Get all the students list
+ Update the student 
+ Add new student into data
+ Delete a student 
 
 # Plan the project
+ 
 
 # Application Architecure
 
-# Strat the project Strat the coding 
 
 # Build the project by using maven
+  Go to new and crate a maven starter project
+  Check the dependencys 
+         spring web
+         spring data jpa
+         thymeleaf
+         mysql driver
+         spring boot dev tools
 
 # Create the required Packages
+		spring boot project main package
+		    under this package we can create project packages 
+		      controller
+		      model
+		      service
+		      Repository
+		     these packages are enough to do the project.
 
 # Check the test run
-
+    rapid run application first to make sure.
+    
+    
 # Start the coding 
   Go to the model package crate a class file  StudentModel
   
